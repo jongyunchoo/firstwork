@@ -42,12 +42,21 @@ public class App {
             }
             System.out.println("결과 : " + result);
 
-            for(int i =0; i<intArray.length; i++) {
-                intArray[i] = result++;
-            };
-            for(int i = 0; i<intArray.length; i++ ) {
-                System.out.println(intArray[i] + " ");
-            };
+            for(int i = 0; i< intArray.length ; i++) {
+                 intArray[i] = result ++;
+            }
+
+            int temp = intArray[10-1];
+
+            for(int i=10-1; i>=1; i--) {
+                intArray[i] = intArray[i-1];
+            }
+            intArray[0] = temp;
+
+            for (int i = 0; i < intArray.length; i++) {
+                    System.out.println(intArray[i] + " ");
+            }
+
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
 
