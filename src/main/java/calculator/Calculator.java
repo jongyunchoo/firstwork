@@ -6,32 +6,28 @@ public class Calculator {
 
     ArrayList<Integer> typeCircle =new ArrayList<>();
 
-    int firstNumber;
-    int secondNumber;
+    int num1;
+    int num2;
     char operator;
     double  result;
 
-    public int calculate(int firstNumber, int secondNumber, char operator) throws InvalidOperatorException {
+    public int calculate(int num1, int num2, char operator) throws InvalidOperatorException {
         double result = 0;
 
         switch (operator) {
             case '+':
-                result = firstNumber + secondNumber;
-                break;
+                return  num1 + num2;
             case '-':
-                result = firstNumber - secondNumber;
-                break;
+                return  num1 - num2;
             case '*':
-                result = firstNumber * secondNumber;
-                break;
+                return  num1 * num2;
             case '/':
-                if (secondNumber == 0) {
+                if (num2 == 0) {
                     throw new InvalidOperatorException("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다. ");
                 }
-                result = firstNumber / secondNumber;
+                return num1 / num2;
             default:
-                throw new InvalidOperatorException("정답" + operator);
+                throw new InvalidOperatorException("지원되지 않은 연산자입니다." + operator);
         }
-        return (int) result;
     }
 }
