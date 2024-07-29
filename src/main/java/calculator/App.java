@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class App {
 
     public static void main(String[] args) {
-        ArrayList<Integer> title= new ArrayList<Integer>();
+        ArrayList<Integer> title= new ArrayList<>();
         title.add(0);
 
         Scanner sc = new Scanner(System.in);

@@ -4,31 +4,31 @@ import java.util.ArrayList;
 
 public class Calculator {
 
-    ArrayList<Integer> corn =new ArrayList<>();
+    ArrayList<Integer> typeCircle =new ArrayList<>();
 
-    int num1;
-    int num2;
+    int firstNumber;
+    int secondNumber;
     char operator;
-    double result;
+    double  result;
 
-    public int calculate(int num1, int num2, char operator) throws InvalidOperatorException {
+    public int calculate(int firstNumber, int secondNumber, char operator) throws InvalidOperatorException {
         double result = 0;
 
         switch (operator) {
             case '+':
-                result = num1 + num2;
+                result = firstNumber + secondNumber;
                 break;
             case '-':
-                result = num1 - num2;
+                result = firstNumber - secondNumber;
                 break;
             case '*':
-                result = num1 * num2;
+                result = firstNumber * secondNumber;
                 break;
             case '/':
-                if (num2 == 0) {
+                if (secondNumber == 0) {
                     throw new InvalidOperatorException("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다. ");
                 }
-                result = num1 / num2;
+                result = firstNumber / secondNumber;
             default:
                 throw new InvalidOperatorException("정답" + operator);
         }
